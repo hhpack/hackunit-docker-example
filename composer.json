@@ -1,0 +1,31 @@
+{
+  "name": "hhpack/hackunit-docker-example",
+  "type": "library",
+  "keywords": [ "hack", "hhvm", "hackunit", "example" ],
+  "description": "HackUnit example for Docker",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Noritaka Horio",
+      "email": "holy.shared.design@gmail.com"
+    }
+  ],
+  "require": {
+    "hhvm": ">=3.12.0"
+  },
+  "require-dev": {
+    "hackpack/hackunit": "~1.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "HHPack\\Docker\\": "src"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "scripts": {
+    "test": "vendor/bin/hackunit test",
+    "check:init": "touch .hhconfig",
+    "check": "./typecheck"
+  }
+}
