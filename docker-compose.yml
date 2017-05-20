@@ -1,0 +1,13 @@
+version: '2'
+services:
+  web:
+    image: typesafety/hhvm
+    volumes:
+      - ./:/home/develop
+    tty: true
+    cap_add:
+      - ALL
+    cap_drop:
+      - NET_ADMIN
+      - SYS_ADMIN
+
