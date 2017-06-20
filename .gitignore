@@ -1,3 +1,9 @@
+.DS_Store
+
+.hhconfig
+.hhvm.hhbc
+
+.composer
 composer.phar
 /vendor/
 
