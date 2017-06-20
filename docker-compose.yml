@@ -2,8 +2,9 @@ version: '2'
 services:
   web:
     image: typesafety/typesafety:latest
+    working_dir: "/tmp/project"
     volumes:
-      - ./:/home/develop/project
+      - .:/tmp/project
     tty: true
     cap_add:
       - ALL
