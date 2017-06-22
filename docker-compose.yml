@@ -1,9 +1,13 @@
 version: '2'
 services:
   web:
-    image: typesafety/typesafety:latest
-    volumes:
-      - ./:/home/develop/project
+    image: typesafety/hackunit:latest
+    build:
+      context: .
+      args:
+        hack_user: develop
+        hack_group: develop
+    user: develop
     tty: true
     cap_add:
       - ALL
