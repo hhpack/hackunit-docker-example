@@ -8,7 +8,6 @@ env:
 services:
 - docker
 before_install:
-- ./check
 - docker-compose run web composer install --no-interaction
 - docker-compose run web touch .hhconfig
 script:
