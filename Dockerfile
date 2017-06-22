@@ -1,7 +1,6 @@
 FROM typesafety/typesafety:latest
 ENV DEBIAN_FRONTEND noninteractive
 MAINTAINER Noritaka Horio <holy.shared.design@gmail.com>
-VOLUME /tmp/package
 ARG hack_user
 ARG hack_group
 RUN sudo adduser --disabled-password --gecos "" ${hack_user} && passwd -l ${hack_user}
