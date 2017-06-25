@@ -1,4 +1,4 @@
-version: '2'
+version: '2.1'
 services:
   web:
     image: typesafety/hackunit:latest
@@ -7,6 +7,7 @@ services:
       args:
         hack_user: develop
         hack_group: develop
+    env_file: .env
     user: develop
     tty: true
     cap_add:
