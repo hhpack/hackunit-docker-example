@@ -7,12 +7,12 @@ final class Stack<T>
 
     private Set<T> $items;
 
-    public function __construct(Traversable<T> $items = [])
+    public function __construct(Traversable $items = [])
     {
         $this->items = Set::fromItems($items);
     }
 
-    public function add(T $item): void
+    public function add($item): void
     {
         $this->items->add($item);
     }
