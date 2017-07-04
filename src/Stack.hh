@@ -7,7 +7,7 @@ final class Stack<T>
 
     private Set<T> $items;
 
-    public function __construct(Traversable $items = [])
+    public function __construct(Traversable<T> $items = [])
     {
         $this->items = Set::fromItems($items);
     }
