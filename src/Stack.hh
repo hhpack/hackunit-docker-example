@@ -12,7 +12,7 @@ final class Stack<T>
         $this->items = Set::fromItems($items);
     }
 
-    public function add($item): void
+    public function add(T $item): void
     {
         $this->items->add($item);
     }
