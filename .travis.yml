@@ -10,6 +10,7 @@ services:
 before_script:
 - printenv | awk -F= '{if ($1 ~ /^(TRAVIS|GITHUB)/) print $1"="$2}' > .env
 - docker-compose build
+- docker-compose run web composer install
 script:
 - docker-compose run web typesafety --verbose --review
 - docker-compose run web composer test
