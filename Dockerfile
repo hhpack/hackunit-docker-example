@@ -10,9 +10,9 @@ RUN sudo chmod 440 /etc/sudoers.d/${hack_user} && \
   sudo chown -R ${hack_user}:${hack_group} /home/${hack_user}
 USER ${hack_user}
 ENV HOME /home/${hack_user}
-WORKDIR /home/${hack_user}
-RUN mkdir project
-WORKDIR project
+RUN sudo mkdir /home/${hack_user}/project && \
+  sudo chown -R ${hack_user}:${hack_group} /home/${hack_user}/project
+WORKDIR /home/${hack_user}/project
 ADD src src
 ADD test test
 ADD composer.json composer.json
